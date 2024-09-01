@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./tailwind.css" rel="stylesheet">
+</head>
+<body class="relative overflow-hidden">
+    <!-- section 1 -->
+    <section id="sec1" class="absolute w-full h-screen bg-emerald-500 flex flex-col items-center justify-center">
+      <div class="text-6xl font-bold">Hello Word</div>
+      <button  type="button" class="px-6 py-2 text-sm font-bold hover:bg-emerald-800 duration-300 hover:scale-105 hover:shadow-md hover:shadow-slate-600 text-white bg-transparent backdrop-blur-lg border-[1px] border-white mt-10 rounded-md">Next Page</button>
+    </section>
+    <!-- section 2 -->
+    <section id="sec2" class="absolute w-full h-screen bg-blue-500 translate-x-[100%] flex items-center justify-center">
+    <h2 class=" text-6xl font-bold">Hello Word</h2>
+    </section>
+
+
+
+
+    <script>
+      
+      const btn = document.querySelector('#sec1 button');
+      const sec1 = document.querySelector('#sec1');
+      const sec2 = document.querySelector('#sec2');
+      btn.addEventListener('click',() => {
+        sec1.classList.add('sec1');
+        sec2.classList.add('sec2');
+
+      })
+    </script>
+</body>
+</html>
